@@ -1,0 +1,41 @@
+{
+  "summary": "Full-stack e2e testing of Vskolz beauty salon site. All 8 backend pytest cases pass (root, health, booking create valid/invalid x4, list, persistence). Frontend e2e flows verified: landing renders all sections, sticky header + smooth scroll, services tabs (face/massage/body/epilation/brows), price formatting with ru-RU thousand separator + ₽, service arrow pre-fills booking form via CustomEvent, full booking submission succeeds (POST /api/bookings -> 201, success toast 'заявка отправлена' shown), empty-form validation shows toast errors, contacts section shows Yandex map iframe + tel:+79776283437 + whatsapp + instagram links, mobile menu opens and nav links scroll + close menu correctly. Mongo persistence confirmed via direct query.",
+  "backend_issues": {"critical": [], "minor": []},
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": [
+      {
+        "screen": "Booking section (left column phone/whatsapp block) and likely any other place using `block link-underline` together",
+        "issues": [
+          "`.link-underline` in index.css declares `display: inline-block` which overrides Tailwind `block` (CSS source order — link-underline wins). Result: phone link and whatsapp link render on the SAME line as '+7 977 628-34-37whatsapp →' instead of stacking. Fix: either add `!important` to Tailwind utility (use `!block`), wrap each anchor in a `<div>`, or scope `.link-underline` to not set display."
+        ]
+      }
+    ]
+  },
+  "test_report_links": [
+    "/app/backend/tests/backend_test.py",
+    "/app/test_reports/pytest/pytest_results.xml"
+  ],
+  "action_items": [
+    "Minor design polish: fix the phone/whatsapp anchors inline-block override so they stack vertically as intended in Booking.jsx (and audit Footer/Contacts for the same `block link-underline` combo)."
+  ],
+  "critical_code_review_comments": [
+    "server.py: When listing bookings, items already include only `id` (no `_id`) — good. Conversion of created_at back to datetime via fromisoformat works because the stored string includes timezone offset from datetime.now(timezone.utc).isoformat().",
+    "server.py: TestBookings persisted documents store created_at as ISO string; consider storing as native BSON datetime for proper Mongo sorting (currently lexicographic ISO string sort luckily matches chronological order because all timestamps share the same UTC format).",
+    "Booking.jsx: After successful submit, `done` state remains true forever — subsequent submits within same session will show 'отправлено' on button immediately on render. Consider resetting `done` after a timeout or on form re-fill.",
+    "index.css `.link-underline { display: inline-block }` collides with Tailwind `block` utility — see design_issues.",
+    "No rate limiting / spam protection on POST /api/bookings — acceptable for MVP but worth a follow-up."
+  ],
+  "updated_files": [
+    "/app/backend/tests/backend_test.py (created)",
+    "/app/test_reports/pytest/pytest_results.xml (generated)"
+  ],
+  "success_rate": {"backend": "100% (8/8)", "frontend": "100% of tested flows"},
+  "test_credentials": "n/a (no auth)",
+  "seed_data_creation": "Test bookings prefixed TEST_ were created and cleaned up via session fixture.",
+  "retest_needed": false,
+  "main_agent_can_self_test": true,
+  "context_for_next_testing_agent": "Backend exposes /api/, /api/health, /api/bookings (POST 201 / GET list). Notifications are intentionally disabled (empty env). pytest file at /app/backend/tests/backend_test.py is the regression suite. Frontend uses data-testid extensively (see Header.jsx, Services.jsx, Booking.jsx, Contacts.jsx). When testing booking form: select service via [role=option] click after opening [data-testid=booking-select-service]; date popover uses react-day-picker — pick `button[name=day]:not([disabled])`. fromDate=today, so any future enabled day works.",
+  "rca of the issue": "Phone+WhatsApp single-line rendering RCA: index.css line 101 sets `.link-underline{display:inline-block}` which, due to CSS source ordering (index.css loaded after Tailwind utilities), wins over `.block{display:block}`. Mitigation: use Tailwind's important modifier `!block` on the anchor, wrap each anchor in a block-level `<div>`, or change `.link-underline` to not set `display`."
+}
