@@ -1,0 +1,109 @@
+{
+  "theme": "Light",
+  "archetype": "1 (Organic & Earthy)",
+  "color_palette": {
+    "background": "#F5EFE6",
+    "surface": "#FDFBF7",
+    "primary": "#2A2724",
+    "secondary": "#E6DFD3",
+    "accent": "#C4A484",
+    "text_main": "#2A2724",
+    "text_muted": "#6C665E",
+    "border": "#E2D9C8"
+  },
+  "typography": {
+    "heading_font": "Cormorant Garamond",
+    "body_font": "Manrope",
+    "scale": {
+      "h1": "text-5xl sm:text-6xl lg:text-7xl tracking-tighter lowercase font-light",
+      "h2": "text-3xl sm:text-4xl lg:text-5xl tracking-tight lowercase font-light",
+      "h3": "text-xl sm:text-2xl tracking-tight font-medium",
+      "h4": "text-lg sm:text-xl font-medium",
+      "body": "text-base leading-relaxed font-light",
+      "small": "text-sm tracking-widest uppercase"
+    }
+  },
+  "spacing_system": {
+    "container_padding": "px-6 md:px-12 lg:px-24",
+    "section_gap": "py-24 md:py-32",
+    "element_gap": "gap-8 md:gap-12"
+  },
+  "components": {
+    "header": {
+      "style": "fixed w-full top-0 z-50 backdrop-blur-xl bg-[#F5EFE6]/80 border-b border-[#E2D9C8]/50 transition-all duration-300",
+      "nav": "hidden md:flex gap-8 text-sm uppercase tracking-widest text-[#2A2724]"
+    },
+    "hero": {
+      "layout": "min-h-[90vh] flex flex-col justify-center relative px-6 md:px-12 lg:px-24",
+      "image_overlay": "absolute inset-0 bg-black/10 z-0",
+      "content_style": "relative z-10 flex flex-col items-start gap-6 max-w-3xl"
+    },
+    "services_tabs": {
+      "style": "flex gap-4 overflow-x-auto pb-4 hide-scrollbar snap-x"
+    },
+    "cards": {
+      "style": "bg-[#FDFBF7] p-8 border border-[#E2D9C8] hover:-translate-y-1 transition-transform duration-300 flex flex-col gap-4"
+    },
+    "buttons": {
+      "primary": "bg-[#2A2724] text-[#F5EFE6] px-8 py-4 text-sm tracking-widest uppercase hover:bg-[#1A1816] transition-colors rounded-none w-fit",
+      "outline": "border border-[#2A2724] text-[#2A2724] px-8 py-4 text-sm tracking-widest uppercase hover:bg-[#2A2724] hover:text-[#F5EFE6] transition-colors rounded-none w-fit"
+    },
+    "form": {
+      "input": "w-full bg-transparent border-b border-[#E2D9C8] py-3 text-[#2A2724] placeholder:text-[#6C665E] focus:outline-none focus:border-[#2A2724] transition-colors rounded-none",
+      "label": "text-xs tracking-widest uppercase text-[#6C665E] mb-2 block"
+    }
+  },
+  "media": {
+    "hero": {
+      "url": "https://images.unsplash.com/photo-1636406261592-055c74637711?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzd8MHwxfHNlYXJjaHwzfHxjb3p5JTIwbmV1dHJhbCUyMGludGVyaW9yJTIwcGxhbnRzJTIwd2FybSUyMGxpZ2h0fGVufDB8fHx8MTc4MTQ4MDc2OXww&ixlib=rb-4.1.0&q=85",
+      "description": "Cozy minimal interior with warm light and plants. Acts as a soothing background."
+    },
+    "about": {
+      "url": "https://images.unsplash.com/photo-1499916078039-922301b0eb9b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzd8MHwxfHNlYXJjaHwyfHxjb3p5JTIwbmV1dHJhbCUyMGludGVyaW9yJTIwcGxhbnRzJTIwd2FybSUyMGxpZ2h0fGVufDB8fHx8MTc4MTQ4MDc2OXww&ixlib=rb-4.1.0&q=85",
+      "description": "Soft, natural interior setup representing the 'tender home' concept."
+    },
+    "masters": [
+      {
+        "url": "https://images.unsplash.com/photo-1733685372835-c25c95426956?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHw0fHxlc3RoZXRpY2lhbiUyMHBvcnRyYWl0JTIwd29tYW4lMjBjbGVhbiUyMG5hdHVyYWwlMjBsaWdodHxlbnwwfHx8fDE3ODE0ODA3Njl8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Portrait of a master esthetician."
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1733685372718-6c93d47602c7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwzfHxlc3RoZXRpY2lhbiUyMHBvcnRyYWl0JTIwd29tYW4lMjBjbGVhbiUyMG5hdHVyYWwlMjBsaWdodHxlbnwwfHx8fDE3ODE0ODA3Njl8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Portrait of a master esthetician in white uniform."
+      }
+    ],
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1745327883508-b6cd32e5dde5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzZ8MHwxfHNlYXJjaHwzfHxzcGElMjBza2luJTIwY2FyZSUyMGFlc3RoZXRpYyUyMG1hc3NhZ2UlMjBjbG9zZXVwfGVufDB8fHx8MTc4MTQ4MDc2OXww&ixlib=rb-4.1.0&q=85",
+        "description": "Spa massage close-up."
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1760862652442-e8ff7ebdd2f8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzN8MHwxfHNlYXJjaHwzfHxiZWF1dHklMjBzYWxvbiUyMGludGVyaW9yJTIwbWluaW1hbCUyMHdhcm0lMjBsaWdodHxlbnwwfHx8fDE3ODE0ODA3Njh8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Salon shelves with products."
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzZ8MHwxfHNlYXJjaHw0fHxzcGElMjBza2luJTIwY2FyZSUyMGFlc3RoZXRpYyUyMG1hc3NhZ2UlMjBjbG9zZXVwfGVufDB8fHx8MTc4MTQ4MDc2OXww&ixlib=rb-4.1.0&q=85",
+        "description": "Woman receiving spa treatment."
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzZ8MHwxfHNlYXJjaHwyfHxzcGElMjBza2luJTIwY2FyZSUyMGFlc3RoZXRpYyUyMG1hc3NhZ2UlMjBjbG9zZXVwfGVufDB8fHx8MTc4MTQ4MDc2OXww&ixlib=rb-4.1.0&q=85",
+        "description": "Relaxing body massage."
+      }
+    ]
+  },
+  "instructions_to_main_agent": [
+    "This is a premium minimalist single-page website for a Moscow beauty salon.",
+    "Implement smooth scrolling using 'lenis' to give it a premium feel.",
+    "Use 'Cormorant Garamond' for headings and 'Manrope' for body text. Ensure fonts are imported.",
+    "Brand name 'вскользь' must always be displayed in lowercase in headings.",
+    "The Hero section should feature an elegant, large, lowercase title and a subtle scroll indicator.",
+    "Use framer-motion for micro-animations like text reveals on scroll and subtle hover states.",
+    "Services & Prices section should feature category tabs and irregular bento-style grids for cards.",
+    "The booking form must be embedded directly on the page using Shadcn components (Form, Input, Select, Calendar).",
+    "Provide a Sonner toast for successful booking confirmation.",
+    "Embed a Yandex Map iframe in the Contacts section pointing to 'Мясницкая 30/1/2с1'.",
+    "Ensure generous whitespace, using Tailwind classes like 'py-24' or 'py-32' between sections.",
+    "Do NOT use 'Inter' font anywhere.",
+    "Apply 'data-testid' to all buttons, links, and form inputs for testing purposes."
+  ]
+}
