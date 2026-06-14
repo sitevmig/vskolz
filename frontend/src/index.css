@@ -98,7 +98,6 @@ body {
 /* Soft underline link */
 .link-underline {
   position: relative;
-  display: inline-block;
 }
 .link-underline::after {
   content: "";

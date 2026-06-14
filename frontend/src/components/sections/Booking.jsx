@@ -86,6 +86,7 @@ export default function Booking() {
       toast.success("заявка отправлена! мы свяжемся с вами для подтверждения.");
       setDone(true);
       setForm(initial);
+      window.setTimeout(() => setDone(false), 4000);
     } catch (err) {
       toast.error("не удалось отправить. попробуйте позже или позвоните нам.");
       // eslint-disable-next-line no-console
