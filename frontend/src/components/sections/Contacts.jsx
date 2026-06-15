@@ -18,7 +18,7 @@ export default function Contacts() {
           className="mb-14"
         >
           <p className="kicker mb-6">найти нас</p>
-          <h2 className="font-display lowercase text-5xl md:text-6xl leading-[0.95] text-[#2A2724]">
+          <h2 className="font-display lowercase text-5xl md:text-6xl leading-[0.95] text-[#1F2A33]">
             контакты <span className="italic">и</span> адрес
           </h2>
         </motion.div>
@@ -33,8 +33,8 @@ export default function Contacts() {
           >
             <Item icon={<MapPin size={18} strokeWidth={1.4} />} label="адрес">
               <p>{SALON.address}</p>
-              <p className="text-[#6C665E] text-sm">{SALON.address_detail}</p>
-              <p className="text-[#6C665E] text-sm mt-1">
+              <p className="text-[#5C6B75] text-sm">{SALON.address_detail}</p>
+              <p className="text-[#5C6B75] text-sm mt-1">
                 м. {SALON.metro.join(" / ")}
               </p>
             </Item>
@@ -51,7 +51,7 @@ export default function Contacts() {
 
             <Item icon={<Clock size={18} strokeWidth={1.4} />} label="часы работы">
               <p>{SALON.hours}</p>
-              <p className="text-[#6C665E] text-sm mt-1">по предварительной записи</p>
+              <p className="text-[#5C6B75] text-sm mt-1">по предварительной записи</p>
             </Item>
 
             <Item icon={<MessageCircle size={18} strokeWidth={1.4} />} label="мессенджеры">
@@ -82,7 +82,7 @@ export default function Contacts() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="lg:col-span-8 border border-[#E2D9C8] overflow-hidden bg-[#FDFBF7]"
+            className="lg:col-span-8 border border-[#C8D5DE] overflow-hidden bg-[#F7FAFC]"
             data-testid="contacts-map"
           >
             <iframe
@@ -103,10 +103,10 @@ export default function Contacts() {
 function Item({ icon, label, children }) {
   return (
     <div className="flex gap-4">
-      <div className="mt-1 text-[#C4A484]">{icon}</div>
+      <div className="mt-1 text-[#6E8DA3]">{icon}</div>
       <div className="flex-1">
         <p className="kicker mb-2">{label}</p>
-        <div className="text-[#2A2724] text-base font-light leading-relaxed">
+        <div className="text-[#1F2A33] text-base font-light leading-relaxed">
           {children}
         </div>
       </div>

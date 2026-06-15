@@ -4,19 +4,18 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Light-blue palette (powder/dusty blue, inspired by vskolz.moscow Instagram tone) */
 :root {
-  --vs-bg: #f5efe6;
-  --vs-surface: #fdfbf7;
-  --vs-secondary: #ece3d4;
-  --vs-ink: #2a2724;
-  --vs-ink-soft: #6c665e;
-  --vs-border: #e2d9c8;
-  --vs-accent: #c4a484;
+  --vs-bg: #eaf1f5;        /* powder blue background */
+  --vs-surface: #f7fafc;   /* cool soft white */
+  --vs-secondary: #d6e2ea; /* dusty blue tone deeper */
+  --vs-ink: #1f2a33;       /* slate/charcoal text */
+  --vs-ink-soft: #5c6b75;  /* muted slate */
+  --vs-border: #c8d5de;    /* hairline blue-grey */
+  --vs-accent: #6e8da3;    /* steel blue accent */
 }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
@@ -28,10 +27,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-::selection {
-  background: var(--vs-ink);
-  color: var(--vs-bg);
-}
+::selection { background: var(--vs-ink); color: var(--vs-bg); }
 
 .font-display {
   font-family: "Cormorant Garamond", Georgia, serif;
@@ -39,9 +35,7 @@ body {
   letter-spacing: -0.015em;
 }
 
-.font-body {
-  font-family: "Manrope", sans-serif;
-}
+.font-body { font-family: "Manrope", sans-serif; }
 
 .kicker {
   font-size: 11px;
@@ -51,54 +45,40 @@ body {
   font-weight: 500;
 }
 
-.hide-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-.hide-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+.hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
-.tabular-nums {
-  font-variant-numeric: tabular-nums;
-}
+.tabular-nums { font-variant-numeric: tabular-nums; }
 
-/* shadcn theme variables (kept for component compatibility) */
+/* shadcn theme variables — kept compatible with the blue palette */
 @layer base {
   :root {
-    --background: 36 41% 93%;
-    --foreground: 24 11% 15%;
-    --card: 36 47% 98%;
-    --card-foreground: 24 11% 15%;
-    --popover: 36 47% 98%;
-    --popover-foreground: 24 11% 15%;
-    --primary: 24 11% 15%;
-    --primary-foreground: 36 41% 93%;
-    --secondary: 36 30% 88%;
-    --secondary-foreground: 24 11% 15%;
-    --muted: 36 30% 90%;
-    --muted-foreground: 30 9% 40%;
-    --accent: 32 33% 64%;
-    --accent-foreground: 24 11% 15%;
+    --background: 204 25% 94%;
+    --foreground: 207 25% 16%;
+    --card: 210 33% 98%;
+    --card-foreground: 207 25% 16%;
+    --popover: 210 33% 98%;
+    --popover-foreground: 207 25% 16%;
+    --primary: 207 25% 16%;
+    --primary-foreground: 204 25% 94%;
+    --secondary: 204 26% 88%;
+    --secondary-foreground: 207 25% 16%;
+    --muted: 204 22% 90%;
+    --muted-foreground: 207 12% 41%;
+    --accent: 205 22% 53%;
+    --accent-foreground: 204 25% 94%;
     --destructive: 0 60% 50%;
-    --destructive-foreground: 36 41% 95%;
-    --border: 35 26% 80%;
-    --input: 35 26% 80%;
-    --ring: 24 11% 15%;
+    --destructive-foreground: 204 25% 96%;
+    --border: 205 22% 83%;
+    --input: 205 22% 83%;
+    --ring: 207 25% 16%;
     --radius: 0;
   }
 }
 
-@layer base {
-  * {
-    @apply border-border;
-  }
-}
+@layer base { * { @apply border-border; } }
 
-/* Soft underline link */
-.link-underline {
-  position: relative;
-}
+.link-underline { position: relative; }
 .link-underline::after {
   content: "";
   position: absolute;
@@ -116,17 +96,12 @@ body {
   transform-origin: left;
 }
 
-/* Floating petals decoration (used in hero) */
 @keyframes float-slow {
   0%, 100% { transform: translateY(0) rotate(0deg); }
   50% { transform: translateY(-12px) rotate(2deg); }
 }
-.float-slow {
-  animation: float-slow 9s ease-in-out infinite;
-}
+.float-slow { animation: float-slow 9s ease-in-out infinite; }
 
 @layer base {
-  [data-debug-wrapper="true"] {
-    display: contents !important;
-  }
+  [data-debug-wrapper="true"] { display: contents !important; }
 }

@@ -100,7 +100,7 @@ export default function Booking() {
     <section
       id="booking"
       data-testid="booking-section"
-      className="px-6 md:px-10 lg:px-16 py-24 md:py-32 bg-[#2A2724] text-[#F5EFE6]"
+      className="px-6 md:px-10 lg:px-16 py-24 md:py-32 bg-[#1F2A33] text-[#EAF1F5]"
     >
       <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 lg:gap-20">
         <motion.div
@@ -110,11 +110,11 @@ export default function Booking() {
           transition={{ duration: 0.8 }}
           className="lg:col-span-5 flex flex-col gap-6"
         >
-          <p className="kicker !text-[#C4A484]">запись</p>
+          <p className="kicker !text-[#6E8DA3]">запись</p>
           <h2 className="font-display lowercase text-5xl md:text-6xl leading-[0.95]">
             оставьте<br /> заявку
           </h2>
-          <p className="text-[#F5EFE6]/70 text-base md:text-lg max-w-md font-light leading-relaxed">
+          <p className="text-[#EAF1F5]/70 text-base md:text-lg max-w-md font-light leading-relaxed">
             мы перезвоним в течение 30 минут в рабочее время, подтвердим запись и подберём время.
           </p>
 
@@ -122,7 +122,7 @@ export default function Booking() {
             <a
               href={`tel:${SALON.phoneRaw}`}
               data-testid="booking-phone"
-              className="block link-underline text-[#F5EFE6]"
+              className="block link-underline text-[#EAF1F5]"
             >
               {SALON.phone}
             </a>
@@ -131,11 +131,11 @@ export default function Booking() {
               target="_blank"
               rel="noreferrer"
               data-testid="booking-whatsapp"
-              className="block link-underline text-[#F5EFE6]"
+              className="block link-underline text-[#EAF1F5]"
             >
               whatsapp →
             </a>
-            <p className="kicker !text-[#F5EFE6]/60">{SALON.hours}</p>
+            <p className="kicker !text-[#EAF1F5]/60">{SALON.hours}</p>
           </div>
         </motion.div>
 
@@ -154,7 +154,7 @@ export default function Booking() {
               onChange={(e) => update("name", e.target.value)}
               placeholder="ваше имя"
               data-testid="booking-input-name"
-              className="bg-transparent border-0 border-b border-[#F5EFE6]/30 rounded-none focus-visible:ring-0 focus-visible:border-[#F5EFE6] text-[#F5EFE6] placeholder:text-[#F5EFE6]/40 h-12 px-0"
+              className="bg-transparent border-0 border-b border-[#EAF1F5]/30 rounded-none focus-visible:ring-0 focus-visible:border-[#EAF1F5] text-[#EAF1F5] placeholder:text-[#EAF1F5]/40 h-12 px-0"
             />
           </Field>
 
@@ -165,7 +165,7 @@ export default function Booking() {
               placeholder="+7 (___) ___-__-__"
               type="tel"
               data-testid="booking-input-phone"
-              className="bg-transparent border-0 border-b border-[#F5EFE6]/30 rounded-none focus-visible:ring-0 focus-visible:border-[#F5EFE6] text-[#F5EFE6] placeholder:text-[#F5EFE6]/40 h-12 px-0"
+              className="bg-transparent border-0 border-b border-[#EAF1F5]/30 rounded-none focus-visible:ring-0 focus-visible:border-[#EAF1F5] text-[#EAF1F5] placeholder:text-[#EAF1F5]/40 h-12 px-0"
             />
           </Field>
 
@@ -174,16 +174,16 @@ export default function Booking() {
               <Select value={form.service} onValueChange={(v) => update("service", v)}>
                 <SelectTrigger
                   data-testid="booking-select-service"
-                  className="w-full bg-transparent border-0 border-b border-[#F5EFE6]/30 rounded-none focus:ring-0 text-[#F5EFE6] data-[placeholder]:text-[#F5EFE6]/40 h-12 px-0"
+                  className="w-full bg-transparent border-0 border-b border-[#EAF1F5]/30 rounded-none focus:ring-0 text-[#EAF1F5] data-[placeholder]:text-[#EAF1F5]/40 h-12 px-0"
                 >
                   <SelectValue placeholder="выберите процедуру" />
                 </SelectTrigger>
                 <SelectContent
-                  className="bg-[#FDFBF7] border-[#E2D9C8] text-[#2A2724] max-h-[320px]"
+                  className="bg-[#F7FAFC] border-[#C8D5DE] text-[#1F2A33] max-h-[320px]"
                 >
                   {SERVICE_CATEGORIES.map((cat) => (
                     <SelectGroup key={cat.key}>
-                      <SelectLabel className="text-[#6C665E] text-[10px] tracking-[0.22em] uppercase">
+                      <SelectLabel className="text-[#5C6B75] text-[10px] tracking-[0.22em] uppercase">
                         {cat.title}
                       </SelectLabel>
                       {cat.items.map((it) => (
@@ -193,7 +193,7 @@ export default function Booking() {
                           data-testid={`booking-option-${it.name}`}
                         >
                           {it.name}
-                          <span className="ml-2 text-[#6C665E]">
+                          <span className="ml-2 text-[#5C6B75]">
                             · {it.price.toLocaleString("ru-RU")} ₽
                           </span>
                         </SelectItem>
@@ -211,9 +211,9 @@ export default function Booking() {
                 <button
                   type="button"
                   data-testid="booking-date-trigger"
-                  className="w-full flex items-center justify-between bg-transparent border-0 border-b border-[#F5EFE6]/30 text-left h-12 text-[#F5EFE6]"
+                  className="w-full flex items-center justify-between bg-transparent border-0 border-b border-[#EAF1F5]/30 text-left h-12 text-[#EAF1F5]"
                 >
-                  <span className={form.date ? "" : "text-[#F5EFE6]/40"}>
+                  <span className={form.date ? "" : "text-[#EAF1F5]/40"}>
                     {form.date
                       ? format(form.date, "d MMMM yyyy", { locale: ru })
                       : "выберите дату"}
@@ -223,7 +223,7 @@ export default function Booking() {
               </PopoverTrigger>
               <PopoverContent
                 align="start"
-                className="w-auto p-0 bg-[#FDFBF7] border-[#E2D9C8]"
+                className="w-auto p-0 bg-[#F7FAFC] border-[#C8D5DE]"
               >
                 <Calendar
                   mode="single"
@@ -241,11 +241,11 @@ export default function Booking() {
             <Select value={form.time} onValueChange={(v) => update("time", v)}>
               <SelectTrigger
                 data-testid="booking-select-time"
-                className="bg-transparent border-0 border-b border-[#F5EFE6]/30 rounded-none focus:ring-0 text-[#F5EFE6] data-[placeholder]:text-[#F5EFE6]/40 h-12 px-0"
+                className="bg-transparent border-0 border-b border-[#EAF1F5]/30 rounded-none focus:ring-0 text-[#EAF1F5] data-[placeholder]:text-[#EAF1F5]/40 h-12 px-0"
               >
                 <SelectValue placeholder="выберите время" />
               </SelectTrigger>
-              <SelectContent className="bg-[#FDFBF7] border-[#E2D9C8] text-[#2A2724]">
+              <SelectContent className="bg-[#F7FAFC] border-[#C8D5DE] text-[#1F2A33]">
                 {TIMES.map((t) => (
                   <SelectItem key={t} value={t} data-testid={`booking-time-${t}`}>
                     {t}
@@ -263,20 +263,20 @@ export default function Booking() {
                 placeholder="пожелания, вопросы"
                 rows={3}
                 data-testid="booking-input-comment"
-                className="bg-transparent border-0 border-b border-[#F5EFE6]/30 rounded-none focus-visible:ring-0 focus-visible:border-[#F5EFE6] text-[#F5EFE6] placeholder:text-[#F5EFE6]/40 px-0 py-2 resize-none"
+                className="bg-transparent border-0 border-b border-[#EAF1F5]/30 rounded-none focus-visible:ring-0 focus-visible:border-[#EAF1F5] text-[#EAF1F5] placeholder:text-[#EAF1F5]/40 px-0 py-2 resize-none"
               />
             </Field>
           </div>
 
           <div className="md:col-span-2 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-4">
-            <p className="text-[11px] tracking-wider text-[#F5EFE6]/50 max-w-md leading-relaxed">
+            <p className="text-[11px] tracking-wider text-[#EAF1F5]/50 max-w-md leading-relaxed">
               нажимая «отправить» вы соглашаетесь с обработкой персональных данных в целях обработки заявки.
             </p>
             <Button
               type="submit"
               disabled={submitting}
               data-testid="booking-submit"
-              className="bg-[#F5EFE6] text-[#2A2724] hover:bg-[#C4A484] hover:text-[#2A2724] rounded-none px-10 py-6 text-[11px] tracking-[0.22em] uppercase h-auto"
+              className="bg-[#EAF1F5] text-[#1F2A33] hover:bg-[#6E8DA3] hover:text-[#1F2A33] rounded-none px-10 py-6 text-[11px] tracking-[0.22em] uppercase h-auto"
             >
               {done ? (
                 <span className="inline-flex items-center gap-2">
@@ -298,7 +298,7 @@ export default function Booking() {
 function Field({ label, children }) {
   return (
     <label className="flex flex-col gap-1.5">
-      <span className="kicker !text-[#F5EFE6]/60">{label}</span>
+      <span className="kicker !text-[#EAF1F5]/60">{label}</span>
       {children}
     </label>
   );

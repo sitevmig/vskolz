@@ -17,8 +17,8 @@ export default function About() {
           className="lg:col-span-5"
         >
           <p className="kicker mb-6">о нас</p>
-          <h2 className="font-display lowercase text-5xl md:text-6xl leading-[0.95] text-[#2A2724]">
-            нежный дом <br />
+          <h2 className="font-display lowercase text-5xl md:text-6xl leading-[0.95] text-[#1F2A33]">
+            студия <br />
             эстетической<br />
             косметологии
           </h2>
@@ -40,7 +40,7 @@ export default function About() {
             />
           </div>
 
-          <div className="space-y-5 max-w-2xl text-[#2A2724] text-base md:text-lg font-light leading-relaxed">
+          <div className="space-y-5 max-w-2xl text-[#1F2A33] text-base md:text-lg font-light leading-relaxed">
             {SALON.long_about.map((p, i) => (
               <p key={i} data-testid={`about-paragraph-${i}`}>
                 {p}
@@ -52,7 +52,7 @@ export default function About() {
             {SALON.features.map((f) => (
               <span
                 key={f}
-                className="px-4 py-2 text-[11px] tracking-[0.18em] uppercase text-[#2A2724] border border-[#E2D9C8] bg-[#FDFBF7]"
+                className="px-4 py-2 text-[11px] tracking-[0.18em] uppercase text-[#1F2A33] border border-[#C8D5DE] bg-[#F7FAFC]"
               >
                 {f}
               </span>

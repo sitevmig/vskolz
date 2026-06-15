@@ -18,11 +18,11 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         <img
           src={HERO_IMAGE}
-          alt="вскользь — интерьер студии"
+          alt="vskolz — интерьер студии"
           className="w-full h-full object-cover"
           loading="eager"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#F5EFE6]/40 via-[#F5EFE6]/20 to-[#F5EFE6]/95" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#EAF1F5]/40 via-[#EAF1F5]/20 to-[#EAF1F5]/95" />
       </div>
 
       {/* Top floating word marker */}
@@ -32,7 +32,7 @@ export default function Hero() {
         transition={{ duration: 0.8, delay: 0.2 }}
         className="absolute top-32 md:top-36 left-6 md:left-10 lg:left-16 z-10"
       >
-        <p className="kicker text-[#2A2724]">эстетическая косметология · москва</p>
+        <p className="kicker text-[#1F2A33]">эстетическая косметология · москва</p>
       </motion.div>
 
       {/* Right-side meta */}
@@ -42,8 +42,8 @@ export default function Hero() {
         transition={{ duration: 1, delay: 0.6 }}
         className="absolute top-32 md:top-36 right-6 md:right-10 lg:right-16 z-10 hidden md:flex flex-col items-end gap-1 text-right"
       >
-        <span className="kicker text-[#2A2724]">{SALON.hours_short}</span>
-        <span className="kicker text-[#2A2724]">мясницкая, 30/1/2</span>
+        <span className="kicker text-[#1F2A33]">{SALON.hours_short}</span>
+        <span className="kicker text-[#1F2A33]">мясницкая, 30/1/2</span>
       </motion.div>
 
       {/* Title block */}
@@ -53,9 +53,9 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
           data-testid="hero-title"
-          className="font-display lowercase text-[22vw] md:text-[15vw] lg:text-[12vw] leading-[0.85] tracking-[-0.04em] text-[#2A2724]"
+          className="font-display lowercase text-[22vw] md:text-[15vw] lg:text-[12vw] leading-[0.85] tracking-[-0.04em] text-[#1F2A33]"
         >
-          вскользь
+          vskolz
         </motion.h1>
 
         <motion.div
@@ -64,7 +64,7 @@ export default function Hero() {
           transition={{ duration: 1, delay: 0.5 }}
           className="mt-10 md:mt-14 grid md:grid-cols-12 gap-8 items-end"
         >
-          <p className="md:col-span-7 lg:col-span-6 font-body text-[#2A2724] text-base md:text-lg leading-relaxed max-w-2xl">
+          <p className="md:col-span-7 lg:col-span-6 font-body text-[#1F2A33] text-base md:text-lg leading-relaxed max-w-2xl">
             {SALON.description}
           </p>
 
@@ -72,15 +72,15 @@ export default function Hero() {
             <button
               data-testid="hero-cta-book"
               onClick={() => scrollTo("booking")}
-              className="group inline-flex items-center gap-3 bg-[#2A2724] text-[#F5EFE6] px-8 py-4 text-[11px] tracking-[0.22em] uppercase hover:bg-[#1A1816] transition-colors"
+              className="group inline-flex items-center gap-3 bg-[#1F2A33] text-[#EAF1F5] px-8 py-4 text-[11px] tracking-[0.22em] uppercase hover:bg-[#14202A] transition-colors"
             >
               записаться
-              <span className="w-6 h-px bg-[#F5EFE6] group-hover:w-10 transition-all" />
+              <span className="w-6 h-px bg-[#EAF1F5] group-hover:w-10 transition-all" />
             </button>
             <button
               data-testid="hero-cta-services"
               onClick={() => scrollTo("services")}
-              className="inline-flex items-center gap-2 px-2 py-4 text-[11px] tracking-[0.22em] uppercase text-[#2A2724] border-b border-[#2A2724] hover:border-[#C4A484] hover:text-[#C4A484] transition-colors"
+              className="inline-flex items-center gap-2 px-2 py-4 text-[11px] tracking-[0.22em] uppercase text-[#1F2A33] border-b border-[#1F2A33] hover:border-[#6E8DA3] hover:text-[#6E8DA3] transition-colors"
             >
               услуги и цены
             </button>
@@ -92,7 +92,7 @@ export default function Hero() {
       <motion.button
         onClick={() => scrollTo("about")}
         aria-label="прокрутить"
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-[#2A2724]"
+        className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-[#1F2A33]"
         animate={{ y: [0, 6, 0] }}
         transition={{ repeat: Infinity, duration: 2.4 }}
         data-testid="hero-scroll-indicator"

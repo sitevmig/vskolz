@@ -6,7 +6,6 @@ import { SALON } from "@/data/salon";
 const NAV = [
   { id: "about", label: "о нас" },
   { id: "services", label: "услуги" },
-  { id: "masters", label: "мастера" },
   { id: "gallery", label: "галерея" },
   { id: "reviews", label: "отзывы" },
   { id: "contacts", label: "контакты" },
@@ -33,7 +32,7 @@ export default function Header() {
       data-testid="site-header"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-[#F5EFE6]/85 backdrop-blur-xl border-b border-[#E2D9C8]/60"
+          ? "bg-[#EAF1F5]/85 backdrop-blur-xl border-b border-[#C8D5DE]/60"
           : "bg-transparent"
       }`}
     >
@@ -41,7 +40,7 @@ export default function Header() {
         <button
           data-testid="brand-link"
           onClick={() => goto("hero")}
-          className="font-display text-3xl md:text-4xl tracking-tighter lowercase text-[#2A2724]"
+          className="font-display text-3xl md:text-4xl tracking-tighter lowercase text-[#1F2A33]"
         >
           {SALON.name}
         </button>
@@ -52,7 +51,7 @@ export default function Header() {
               key={n.id}
               data-testid={`nav-${n.id}`}
               onClick={() => goto(n.id)}
-              className="text-[11px] tracking-[0.22em] uppercase text-[#2A2724] link-underline"
+              className="text-[11px] tracking-[0.22em] uppercase text-[#1F2A33] link-underline"
             >
               {n.label}
             </button>
@@ -63,14 +62,14 @@ export default function Header() {
           <button
             data-testid="header-cta-book"
             onClick={() => goto("booking")}
-            className="hidden md:inline-flex items-center px-6 py-3 bg-[#2A2724] text-[#F5EFE6] text-[11px] tracking-[0.22em] uppercase hover:bg-[#1A1816] transition-colors"
+            className="hidden md:inline-flex items-center px-6 py-3 bg-[#1F2A33] text-[#EAF1F5] text-[11px] tracking-[0.22em] uppercase hover:bg-[#14202A] transition-colors"
           >
             записаться
           </button>
           <button
             data-testid="mobile-menu-toggle"
             aria-label="menu"
-            className="lg:hidden p-2 text-[#2A2724]"
+            className="lg:hidden p-2 text-[#1F2A33]"
             onClick={() => setOpen((v) => !v)}
           >
             {open ? <X size={22} /> : <Menu size={22} />}
@@ -85,7 +84,7 @@ export default function Header() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.25 }}
-            className="lg:hidden bg-[#F5EFE6]/95 backdrop-blur-xl border-b border-[#E2D9C8]/60"
+            className="lg:hidden bg-[#EAF1F5]/95 backdrop-blur-xl border-b border-[#C8D5DE]/60"
             data-testid="mobile-menu"
           >
             <div className="px-6 py-6 flex flex-col gap-4">
@@ -94,7 +93,7 @@ export default function Header() {
                   key={n.id}
                   data-testid={`mobile-nav-${n.id}`}
                   onClick={() => goto(n.id)}
-                  className="text-left text-sm tracking-[0.18em] uppercase text-[#2A2724] py-2 border-b border-[#E2D9C8]/60"
+                  className="text-left text-sm tracking-[0.18em] uppercase text-[#1F2A33] py-2 border-b border-[#C8D5DE]/60"
                 >
                   {n.label}
                 </button>
@@ -102,7 +101,7 @@ export default function Header() {
               <button
                 data-testid="mobile-cta-book"
                 onClick={() => goto("booking")}
-                className="mt-2 px-6 py-3 bg-[#2A2724] text-[#F5EFE6] text-[11px] tracking-[0.22em] uppercase"
+                className="mt-2 px-6 py-3 bg-[#1F2A33] text-[#EAF1F5] text-[11px] tracking-[0.22em] uppercase"
               >
                 записаться
               </button>
