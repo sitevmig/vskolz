@@ -1,16 +1,6 @@
 import { motion } from "framer-motion";
 import { GALLERY } from "@/data/salon";
 
-// Bento grid for visual variety
-const layout = [
-  "col-span-2 row-span-2 aspect-square",
-  "col-span-1 row-span-1 aspect-square",
-  "col-span-1 row-span-1 aspect-square",
-  "col-span-1 row-span-2 aspect-[1/2]",
-  "col-span-2 row-span-1 aspect-[2/1]",
-  "col-span-1 row-span-1 aspect-square",
-];
-
 export default function Gallery() {
   return (
     <section
@@ -24,32 +14,40 @@ export default function Gallery() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.8 }}
-          className="mb-14"
+          className="mb-14 grid lg:grid-cols-12 gap-8 items-end"
         >
-          <p className="kicker mb-6">пространство</p>
-          <h2 className="font-display lowercase text-5xl md:text-6xl leading-[0.95] text-[#1F2A33]">
-            галерея <span className="italic">студии</span>
-          </h2>
+          <div className="lg:col-span-7">
+            <p className="kicker mb-6">пространство</p>
+            <h2 className="font-display lowercase text-5xl md:text-6xl leading-[0.95] text-[#1F2A33]">
+              галерея <span className="italic">студии</span>
+            </h2>
+          </div>
+          <p className="lg:col-span-5 text-[#5C6B75] text-sm md:text-base font-light max-w-md">
+            подлинные интерьеры vskolz — то, что ждёт вас в нашем камерном пространстве.
+          </p>
         </motion.div>
 
-        <div className="grid grid-cols-3 md:grid-cols-4 gap-3 md:gap-4 auto-rows-[110px] md:auto-rows-[160px] lg:auto-rows-[200px]">
+        <div
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6"
+          data-testid="gallery-grid"
+        >
           {GALLERY.map((src, i) => (
-            <motion.div
-              key={src}
-              initial={{ opacity: 0, scale: 0.96 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+            <motion.figure
+              key={src + i}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.7, delay: i * 0.06 }}
+              transition={{ duration: 0.7, delay: (i % 3) * 0.08 }}
               data-testid={`gallery-item-${i}`}
-              className={`${layout[i % layout.length]} overflow-hidden bg-[#D6E2EA] group`}
+              className="relative overflow-hidden bg-[#D6E2EA] aspect-[4/5] group"
             >
               <img
                 src={src}
-                alt={`vskolz gallery ${i + 1}`}
-                className="w-full h-full object-cover group-hover:scale-[1.06] transition-transform duration-[1.4s] ease-out"
+                alt={`vskolz · фото ${i + 1}`}
                 loading="lazy"
+                className="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-[1.4s] ease-out"
               />
-            </motion.div>
+            </motion.figure>
           ))}
         </div>
       </div>

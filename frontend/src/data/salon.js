@@ -156,6 +156,10 @@ const PH_PINK     = "/img/vskolz_pink_chair_skylight.jpg";    // pink recliner, 
 const PH_BED_LAMP = "/img/vskolz_bed_lamp.jpg";               // treatment bed, lamp, apparatus
 const PH_MASTER   = "/img/vskolz_esthetician.jpg";            // smiling esthetician at work
 const PH_MIRROR   = "/img/vskolz_mirror_room.jpg";            // mirror reflection, lounge corner
+const PH_TEA      = "/img/vskolz_tea_table.jpg";              // tea cup on table with sweets
+const PH_HANGERS  = "/img/vskolz_hangers_diffuser.jpg";       // hangers + diffuser at entrance
+const PH_LAMP     = "/img/vskolz_vintage_lamp.jpg";           // vintage pleated lamp + gold mirror
+const PH_FULLROOM = "/img/vskolz_full_room.jpg";              // full treatment room
 
 export const YANDEX_BACKGROUND =
   "https://avatars.mds.yandex.net/get-maps-adv-crm/4771617/2a0000019547746097a2c1371bab28d1a0db/orig";
@@ -164,10 +168,13 @@ export const HERO_IMAGE = PH_ATTIC;
 export const ABOUT_IMAGE = PH_PINK;
 
 export const GALLERY = [
-  PH_ATTIC,
+  PH_FULLROOM,
+  PH_LAMP,
+  PH_TEA,
   PH_PINK,
+  PH_HANGERS,
   PH_BED_LAMP,
-  PH_MASTER,
   PH_MIRROR,
-  YANDEX_BACKGROUND,
+  PH_MASTER,
+  PH_ATTIC,
 ];
