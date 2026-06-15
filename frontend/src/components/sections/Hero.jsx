@@ -103,8 +103,3 @@ export default function Hero() {
     </section>
   );
 }
-Width={1.4} />
-      </motion.button>
-    </section>
-  );
-}
