@@ -1,4 +1,5 @@
-// All content sourced from public Yandex Maps card + verified web sources for vskolz.ru pricelist (2025).
+// All content sourced from public Yandex Maps card (yandex.ru/maps/org/vskolz/167816522961/prices/)
+// + verified Instagram photos from @vskolz.moscow.
 
 export const SALON = {
   name: "vskolz",
@@ -31,9 +32,64 @@ export const SALON = {
   ],
 };
 
-// Prices verified from Yandex Maps card (yandex.ru/maps/org/vskolz/167816522961/prices/).
-// Categories shown here are those publicly confirmed; for the full pricelist call the studio.
+// VERIFIED prices from yandex.ru/maps/org/vskolz/167816522961/prices/
 export const SERVICE_CATEGORIES = [
+  {
+    key: "cleaning",
+    title: "чистка кожи",
+    description: "глубокое очищение, восстановление баланса кожи",
+    items: [
+      { name: "Ультразвуковая чистка", price: 3000, duration: "60 мин" },
+      { name: "Атравматичная чистка", price: 4000, duration: "75 мин" },
+      { name: "Комбинированная чистка", price: 5000, duration: "90 мин" },
+    ],
+  },
+  {
+    key: "care",
+    title: "косметологические уходы",
+    description: "программы ухода по 2 часа · подбор под запрос кожи",
+    items: [
+      { name: "Интенсивное увлажнение", price: 4500, duration: "2 ч" },
+      { name: "Успокаивающий эффект", price: 4500, duration: "2 ч" },
+      { name: "Наполнение & разглаживание", price: 4500, duration: "2 ч" },
+      { name: "Наполнение & укрепление", price: 4500, duration: "2 ч" },
+      { name: "Лифтинг & стимуляция", price: 4500, duration: "2 ч" },
+      { name: "Регенерация & разглаживание", price: 4500, duration: "2 ч" },
+    ],
+  },
+  {
+    key: "peels",
+    title: "пилинги",
+    description: "химические и аппаратные пилинги",
+    items: [
+      { name: "Пилинг фарфоровый", price: 4000, duration: "45 мин" },
+      { name: "Пилинг ферментный", price: 4000, duration: "45 мин" },
+      { name: "Пилинг ABR", price: 6000, duration: "60 мин" },
+      { name: "PRX-T33 · лицо", price: 6000, duration: "45 мин" },
+      { name: "PRX-T33 · лицо + шея", price: 10000, duration: "60 мин" },
+    ],
+  },
+  {
+    key: "photo",
+    title: "фотоомоложение",
+    description: "ipl-фотоомоложение для ровного тона и плотности кожи",
+    items: [
+      { name: "Шея", price: 2000, duration: "20 мин" },
+      { name: "Декольте", price: 2000, duration: "20 мин" },
+      { name: "Кисти", price: 2000, duration: "20 мин" },
+      { name: "Лицо", price: 6000, duration: "40 мин" },
+      { name: "Лицо + шея", price: 7000, duration: "50 мин" },
+      { name: "Лицо + шея + декольте", price: 8000, duration: "60 мин" },
+    ],
+  },
+  {
+    key: "biotok",
+    title: "биотоки & led-терапия",
+    description: "микротоковая стимуляция и светотерапия",
+    items: [
+      { name: "Биотоки", price: 3000, duration: "30 мин" },
+    ],
+  },
   {
     key: "epilation",
     title: "аппаратное удаление волос",
@@ -41,11 +97,11 @@ export const SERVICE_CATEGORIES = [
     items: [
       { name: "Верхняя губа", price: 700, duration: "10 мин" },
       { name: "Подбородок", price: 1000, duration: "10 мин" },
-      { name: "Лицо", price: 2300, duration: "20 мин" },
+      { name: "Кисть", price: 1000, duration: "10 мин" },
       { name: "Подмышки", price: 1200, duration: "15 мин" },
       { name: "Грудная клетка", price: 1200, duration: "20 мин" },
-      { name: "Кисть", price: 1000, duration: "10 мин" },
       { name: "Руки ниже локтя", price: 2000, duration: "25 мин" },
+      { name: "Лицо", price: 2300, duration: "20 мин" },
       { name: "Руки полностью", price: 2900, duration: "40 мин" },
     ],
   },
@@ -94,19 +150,27 @@ export const TESTIMONIALS = [
   },
 ];
 
-// REAL photos: Instagram posts from @vskolz.moscow downloaded to /public/img/
-// + 2 real Yandex CDN photos uploaded by the salon.
-const IG1 = "/img/ig_DGAP6AZsDKB_1.jpg";
-const IG2 = "/img/ig_DGkZNLWsLoE_1.jpg";
-const IG3 = "/img/ig_DJ9QqbaIfK__1.jpg";
+// Real photos from @vskolz.moscow Instagram (post DJ9QqbaIfK_ carousel slides + earlier posts).
+const IG_LACE       = "/img/ig_DGAP6AZsDKB_1.jpg";        // delicate veil / lace
+const IG_FLATLAY    = "/img/ig_DGkZNLWsLoE_1.jpg";        // flatlay
+const IG_BAG        = "/img/ig_DJ9QqbaIfK__1.jpg";        // bag flatlay
+const VS_SKYLIGHT   = "/img/vskolz_interior_skylight_1.jpg"; // interior, slanted skylight + chair + bag
+const VS_ANKETA     = "/img/vskolz_anketa_friend.jpg";    // table with "anketa druzhby" cards
+const VS_MORNING    = "/img/vskolz_morning_light.jpg";    // morning light, curtains, cabinet
+const VS_LPG        = "/img/vskolz_lpg_apparatus.jpg";    // LPG apparatus in treatment room
 
 export const YANDEX_BACKGROUND =
   "https://avatars.mds.yandex.net/get-maps-adv-crm/4771617/2a0000019547746097a2c1371bab28d1a0db/orig";
-export const YANDEX_LOGO =
-  "https://avatars.mds.yandex.net/get-maps-adv-crm/4771617/2a0000019547746090674e664b1636ce20f4/orig";
 
-export const HERO_IMAGE = IG1;
-export const ABOUT_IMAGE = IG2;
+export const HERO_IMAGE = VS_SKYLIGHT;
+export const ABOUT_IMAGE = VS_MORNING;
 
-// Real photos from @vskolz.moscow Instagram + Yandex CDN. Add more local files to /public/img/ to extend the gallery.
-export const GALLERY = [IG1, IG3, IG2, YANDEX_BACKGROUND, IG3, IG1];
+export const GALLERY = [
+  VS_SKYLIGHT,
+  VS_MORNING,
+  IG_LACE,
+  VS_ANKETA,
+  IG_FLATLAY,
+  VS_LPG,
+  IG_BAG,
+];
