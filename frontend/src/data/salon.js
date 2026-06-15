@@ -176,4 +176,5 @@ export const GALLERY = [
   PH_BED_LAMP,
   PH_MIRROR,
   PH_MASTER,
+  PH_ATTIC,
 ];
