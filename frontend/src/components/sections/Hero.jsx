@@ -22,7 +22,7 @@ export default function Hero() {
           className="w-full h-full object-cover"
           loading="eager"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#EAF1F5]/40 via-[#EAF1F5]/20 to-[#EAF1F5]/95" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#EAF1F5]/60 via-[#EAF1F5]/40 to-[#EAF1F5]/98" />
       </div>
 
       {/* Top floating word marker */}
@@ -42,8 +42,8 @@ export default function Hero() {
         transition={{ duration: 1, delay: 0.6 }}
         className="absolute top-32 md:top-36 right-6 md:right-10 lg:right-16 z-10 hidden md:flex flex-col items-end gap-1 text-right"
       >
-        <span className="kicker text-[#1F2A33]">{SALON.hours_short}</span>
-        <span className="kicker text-[#1F2A33]">мясницкая, 30/1/2</span>
+        <span className="text-[13px] md:text-[14px] tracking-[0.22em] uppercase font-medium text-[#14202A]">{SALON.hours_short}</span>
+        <span className="text-[13px] md:text-[14px] tracking-[0.22em] uppercase font-medium text-[#14202A]">мясницкая, 30/1/2</span>
       </motion.div>
 
       {/* Title block */}
@@ -64,7 +64,7 @@ export default function Hero() {
           transition={{ duration: 1, delay: 0.5 }}
           className="mt-10 md:mt-14 grid md:grid-cols-12 gap-8 items-end"
         >
-          <p className="md:col-span-7 lg:col-span-6 font-body text-[#1F2A33] text-base md:text-lg leading-relaxed max-w-2xl">
+          <p className="md:col-span-7 lg:col-span-6 font-body text-[#14202A] text-lg md:text-xl lg:text-2xl font-normal leading-relaxed max-w-2xl">
             {SALON.description}
           </p>
 
@@ -99,6 +99,11 @@ export default function Hero() {
       >
         <span className="kicker">scroll</span>
         <ArrowDown size={16} strokeWidth={1.4} />
+      </motion.button>
+    </section>
+  );
+}
+Width={1.4} />
       </motion.button>
     </section>
   );
