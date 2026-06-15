@@ -150,27 +150,24 @@ export const TESTIMONIALS = [
   },
 ];
 
-// Real photos from @vskolz.moscow Instagram (post DJ9QqbaIfK_ carousel slides + earlier posts).
-const IG_LACE       = "/img/ig_DGAP6AZsDKB_1.jpg";        // delicate veil / lace
-const IG_FLATLAY    = "/img/ig_DGkZNLWsLoE_1.jpg";        // flatlay
-const IG_BAG        = "/img/ig_DJ9QqbaIfK__1.jpg";        // bag flatlay
-const VS_SKYLIGHT   = "/img/vskolz_interior_skylight_1.jpg"; // interior, slanted skylight + chair + bag
-const VS_ANKETA     = "/img/vskolz_anketa_friend.jpg";    // table with "anketa druzhby" cards
-const VS_MORNING    = "/img/vskolz_morning_light.jpg";    // morning light, curtains, cabinet
-const VS_LPG        = "/img/vskolz_lpg_apparatus.jpg";    // LPG apparatus in treatment room
+// Real photos from @vskolz.moscow Instagram — clean, full quality.
+const PH_ATTIC    = "/img/vskolz_treatment_room_attic.jpg";   // attic studio with skylight + treatment bed
+const PH_PINK     = "/img/vskolz_pink_chair_skylight.jpg";    // pink recliner, skylight, dresser
+const PH_BED_LAMP = "/img/vskolz_bed_lamp.jpg";               // treatment bed, lamp, apparatus
+const PH_MASTER   = "/img/vskolz_esthetician.jpg";            // smiling esthetician at work
+const PH_MIRROR   = "/img/vskolz_mirror_room.jpg";            // mirror reflection, lounge corner
 
 export const YANDEX_BACKGROUND =
   "https://avatars.mds.yandex.net/get-maps-adv-crm/4771617/2a0000019547746097a2c1371bab28d1a0db/orig";
 
-export const HERO_IMAGE = VS_SKYLIGHT;
-export const ABOUT_IMAGE = VS_MORNING;
+export const HERO_IMAGE = PH_ATTIC;
+export const ABOUT_IMAGE = PH_PINK;
 
 export const GALLERY = [
-  VS_SKYLIGHT,
-  VS_MORNING,
-  IG_LACE,
-  VS_ANKETA,
-  IG_FLATLAY,
-  VS_LPG,
-  IG_BAG,
+  PH_ATTIC,
+  PH_PINK,
+  PH_BED_LAMP,
+  PH_MASTER,
+  PH_MIRROR,
+  YANDEX_BACKGROUND,
 ];
