@@ -31,66 +31,33 @@ export const SALON = {
   ],
 };
 
-// Prices reconstructed from publicly visible vskolz.ru fragments and Yandex listings (Dec 2025).
+// Prices verified from Yandex Maps card (yandex.ru/maps/org/vskolz/167816522961/prices/).
+// Categories shown here are those publicly confirmed; for the full pricelist call the studio.
 export const SERVICE_CATEGORIES = [
   {
-    key: "face",
-    title: "лицо",
-    description: "уходовые программы, чистки, пилинги, маски",
+    key: "epilation",
+    title: "аппаратное удаление волос",
+    description: "диодная лазерная эпиляция · бережно для всех типов кожи",
     items: [
-      { name: "Интенсивное увлажнение (1 зона)", price: 700, duration: "20 мин" },
-      { name: "Альгинатная маска для лица", price: 1000, duration: "20 мин" },
-      { name: "Ультразвуковая чистка лица", price: 4000, duration: "60 мин" },
-      { name: "Дерматологический пилинг HYDRAFACIAL", price: 4500, duration: "60 мин" },
-      { name: "Фотодинамическая терапия Heleo4", price: 4500, duration: "45 мин" },
-      { name: "PRX-T33 (лицо)", price: 4500, duration: "45 мин" },
-      { name: "PRX-T33 (лицо + шея)", price: 5900, duration: "60 мин" },
-      { name: "Успокаивающий эффект", price: 4500, duration: "45 мин" },
-      { name: "Наполнение & укрепление", price: 4500, duration: "45 мин" },
-      { name: "Наполнение & разглаживание", price: 4500, duration: "45 мин" },
-      { name: "Лифтинг & стимуляция", price: 4500, duration: "45 мин" },
+      { name: "Верхняя губа", price: 700, duration: "10 мин" },
+      { name: "Подбородок", price: 1000, duration: "10 мин" },
+      { name: "Лицо", price: 2300, duration: "20 мин" },
+      { name: "Подмышки", price: 1200, duration: "15 мин" },
+      { name: "Грудная клетка", price: 1200, duration: "20 мин" },
+      { name: "Кисть", price: 1000, duration: "10 мин" },
+      { name: "Руки ниже локтя", price: 2000, duration: "25 мин" },
+      { name: "Руки полностью", price: 2900, duration: "40 мин" },
     ],
   },
   {
-    key: "rf",
-    title: "rf-лифтинг",
-    description: "аппаратная подтяжка кожи без операции",
+    key: "lpg",
+    title: "lpg-массаж",
+    description: "аппаратный вакуумно-роликовый массаж · все зоны тела",
     items: [
-      { name: "RF-лифтинг лица", price: 3000, duration: "30 мин" },
-      { name: "RF-лифтинг лица + шея", price: 5000, duration: "45 мин" },
-      { name: "RF-лифтинг лица + шея + декольте", price: 6000, duration: "60 мин" },
-      { name: "RF-лифтинг по телу (1 зона)", price: 3000, duration: "30 мин" },
-      { name: "Курс RF-лифтинга, 5 сеансов (5-й в подарок)", price: 12000, duration: "5×30 мин" },
-    ],
-  },
-  {
-    key: "peels",
-    title: "пилинги",
-    description: "химические и аппаратные пилинги",
-    items: [
-      { name: "Гидропилинг", price: 3600, duration: "45 мин" },
-      { name: "Пилинг «фарфоровый»", price: 4000, duration: "45 мин" },
-      { name: "PRX-T33 (лицо + шея)", price: 5900, duration: "60 мин" },
-    ],
-  },
-  {
-    key: "massage",
-    title: "массаж",
-    description: "ручной и аппаратный массаж лица и тела",
-    items: [
-      { name: "Массаж лица", price: 2000, duration: "30 мин" },
-      { name: "Скульптурный массаж лица", price: 4500, duration: "60 мин" },
-      { name: "Классический LPG-массаж", price: 3000, duration: "45 мин" },
-      { name: "Лимфодренажный массаж тела", price: 3000, duration: "60 мин" },
-    ],
-  },
-  {
-    key: "injections",
-    title: "инъекции",
-    description: "бережные инъекционные процедуры",
-    items: [
-      { name: "Безинъекционная биоревитализация", price: 7000, duration: "60 мин" },
-      { name: "Биоревитализация (премиум)", price: 8000, duration: "60 мин" },
+      { name: "LPG — все зоны, 1 сеанс", price: 3000, duration: "35 мин" },
+      { name: "Костюм (для LPG)", price: 1000, duration: "—" },
+      { name: "LPG — все зоны, курс 10 сеансов", price: 30000, duration: "10×35 мин" },
+      { name: "LPG — все зоны, курс 20 сеансов", price: 60000, duration: "20×35 мин" },
     ],
   },
 ];
