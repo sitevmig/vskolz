@@ -127,22 +127,19 @@ export const TESTIMONIALS = [
   },
 ];
 
-// REAL Yandex CDN photos uploaded by the salon (only 2 are publicly exposed via the official Yandex business card).
-// Других публичных фото со страницы Yandex Maps извлечь технически нельзя — нужно скачать вручную из Instagram/Я.Карт.
+// REAL photos: Instagram posts from @vskolz.moscow downloaded to /public/img/
+// + 2 real Yandex CDN photos uploaded by the salon.
+const IG1 = "/img/ig_DGAP6AZsDKB_1.jpg";
+const IG2 = "/img/ig_DGkZNLWsLoE_1.jpg";
+const IG3 = "/img/ig_DJ9QqbaIfK__1.jpg";
+
 export const YANDEX_BACKGROUND =
   "https://avatars.mds.yandex.net/get-maps-adv-crm/4771617/2a0000019547746097a2c1371bab28d1a0db/orig";
 export const YANDEX_LOGO =
   "https://avatars.mds.yandex.net/get-maps-adv-crm/4771617/2a0000019547746090674e664b1636ce20f4/orig";
 
-export const HERO_IMAGE = YANDEX_BACKGROUND;
-export const ABOUT_IMAGE = YANDEX_BACKGROUND;
+export const HERO_IMAGE = IG1;
+export const ABOUT_IMAGE = IG2;
 
-// Gallery: uses the real Yandex background photo repeated; please replace with photos exported from Instagram @vskolz.moscow.
-export const GALLERY = [
-  YANDEX_BACKGROUND,
-  YANDEX_LOGO,
-  YANDEX_BACKGROUND,
-  YANDEX_LOGO,
-  YANDEX_BACKGROUND,
-  YANDEX_LOGO,
-];
+// Real photos from @vskolz.moscow Instagram + Yandex CDN. Add more local files to /public/img/ to extend the gallery.
+export const GALLERY = [IG1, IG3, IG2, YANDEX_BACKGROUND, IG3, IG1];
